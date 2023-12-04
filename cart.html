@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <title>Cart</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="navbar">
+        <div class="logo">
+          <a href="index.html"><img src="/Images/chp-logo.jpg" alt="logoImage" /></a>
+        </div>
+        <nav>
+          <ul id="menuItems">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="product.html">Products</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="account.html">Account</a></li>
+          </ul>
+        </nav>
+        <a href="cart.html"><i class="fa-solid fa-cart-arrow-down"></i></a>
+        <i class="fa-solid fa-bars menu-icon" onclick="menuToggle()"></i>
+      </div>
+    </div>
+
+    <!-- ----------------CREATE ITEM DETAILS------------------- -->
+
+    <div class="small_container Cart-page">
+        <table>
+            <tr>
+                <th>Product</th>
+                <th>Quantity</th>
+                <th>Subtotal</th>
+            </tr>
+            <tr>
+                <td>
+                    <div class="cart-info">
+                        <img src="/Images/product5.jpg">
+                     <div>
+                        <p>Socks by jockey</p>
+                        <small>price: $4.00</small>
+                        <br>
+                        <a href="#">Remove</a>
+                     </div>
+                    </div>
+                </td>
+                <td><input type="number" value="1"></td>
+                <td>$50</td>
+            </tr>
+
+            <tr>
+              <td>
+                  <div class="cart-info">
+                      <img src="/Images/product2.jpg">
+                   <div>
+                      <p>Socks by jockey</p>
+                      <small>price: $4.00</small>
+                      <br>
+                      <a href="#">Remove</a>
+                   </div>
+                  </div>
+              </td>
+              <td><input type="number" value="1"></td>
+              <td>$50</td>
+          </tr>
+
+          <tr>
+            <td>
+                <div class="cart-info">
+                    <img src="/Images/product3.jpg">
+                 <div>
+                    <p>Socks by jockey</p>
+                    <small>price: $4.00</small>
+                    <br>
+                    <a href="#">Remove</a>
+                 </div>
+                </div>
+            </td>
+            <td><input type="number" value="1"></td>
+            <td>$50</td>
+        </tr>
+
+        <tr>
+          <td>
+              <div class="cart-info">
+                  <img src="/Images/product4.jpeg">
+               <div>
+                  <p>Socks by jockey</p>
+                  <small>price: $4.00</small>
+                  <br>
+                  <a href="#">Remove</a>
+               </div>
+              </div>
+          </td>
+          <td><input type="number" value="1"></td>
+          <td>$50</td>
+      </tr>
+        </table>
+
+        <div class="total-price">
+          <table>
+            <tr>
+              <td>Subtotal</td>
+              <td>$200.00</td>
+            </tr>
+            <tr>
+              <td>Tax</td>
+              <td>$7.00</td>
+            </tr>
+            <tr>
+              <td>Total</td>
+              <td>$207.00</td>
+            </tr>
+          </table>
+        </div>
+    </div>
+    
+
+    <!-- ----------------footer section------------------- -->
+
+    <div class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="footer-col1">
+            <h3>Download our app</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Voluptas, culpa.
+            </p>
+            <img src="/Images/playstorre.png" class="download-app" />
+            <img src="/Images/app Store.png" class="download-app" />
+          </div>
+          <div class="footer-col2">
+            <img src="/Images/chp-logo.jpg" class="logo" />
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut ipsa,
+              consequatur at iure sit alias in! Ut voluptatibus dolor similique!
+            </p>
+          </div>
+          <div class="footer-col3">
+            <h3>Useful links</h3>
+            <ul>
+              <li>Coupons</li>
+              <li>Return Policy</li>
+              <li>Blog Post</li>
+            </ul>
+          </div>
+          <div class="footer-col4">
+            <h3>Follow Us</h3>
+            <ul>
+              <li>Instagram</li>
+              <li>Facebook</li>
+              <li>YouTube</li>
+            </ul>
+          </div>
+        </div>
+
+        <hr />
+
+        <div class="copyright">Copyright-2023 Chhapdoh</div>
+      </div>
+    </div>
+
+    <!-- ------------------js for toggle menu--------------------- -->
+    <script>
+      var menuItems = document.getElementById("menuItems");
+      menuItems.style.maxHeight = "0px";
+
+      function menuToggle() {
+        if (menuItems.style.maxHeight == "0px") {
+          menuItems.style.maxHeight = "200px";
+        } else {
+          menuItems.style.maxHeight = "0px";
+        }
+      }
+
+    </script>
+  </body>
+</html>
